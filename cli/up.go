@@ -76,7 +76,7 @@ func UpRun(r *cmd.Root, c *cmd.Sub) {
 	// Check that the listener port is available.
 	port, err := verifyPort(cfg.Interface.ListenPort)
 	checkErr(err)
-	fmt.Println("[+] Creating LibP2P Node On:" +strconv.Itoa(port))
+	fmt.Println("[+] Creating LibP2P Node On:" + strconv.Itoa(port))
 	// Create P2P Node
 	host, dht, err := p2p.CreateNode(
 		ctx,
@@ -128,7 +128,7 @@ func UpRun(r *cmd.Root, c *cmd.Sub) {
 			}
 			topic.Publish(ctx, msgBytes)
 		}
-	}else{
+	} else {
 		// and subscribe to it
 		sub, err := topic.Subscribe()
 		if err != nil {
@@ -165,7 +165,6 @@ func topicName(Name string) string {
 	return "chat-room:" + Name
 }
 
-
 // singalExit registers two syscall handlers on the system  so that if
 // an SIGINT or SIGTERM occur on the system zasentinel can gracefully
 // shutdown and remove the filesystem lock file.
@@ -178,7 +177,6 @@ func signalExit(host host.Host) {
 	// Shut the node down
 	err := host.Close()
 	checkErr(err)
-
 
 	fmt.Println("Received signal, shutting down...")
 

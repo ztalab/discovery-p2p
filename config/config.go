@@ -10,7 +10,7 @@ import (
 type Config struct {
 	Path      string    `yaml:"path,omitempty"`
 	Interface Interface `yaml:"interface"`
-	Peers     []string    `yaml:"peers"`
+	Peers     []string  `yaml:"peers"`
 }
 
 // Interface defines all of the fields that a local node needs to know about itself!

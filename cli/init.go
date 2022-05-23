@@ -7,9 +7,9 @@ import (
 	"strings"
 
 	"github.com/DataDrake/cli-ng/v2/cmd"
-	"github.com/ztalab/zasentinel-p2p/config"
 	"github.com/libp2p/go-libp2p"
 	"github.com/libp2p/go-libp2p-core/crypto"
+	"github.com/ztalab/zasentinel-p2p/config"
 	"gopkg.in/yaml.v2"
 )
 
