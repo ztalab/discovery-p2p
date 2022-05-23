@@ -2,6 +2,7 @@ package cli
 
 import (
 	"fmt"
+	"log"
 	"os"
 	"path/filepath"
 	"strings"
@@ -17,7 +18,7 @@ import (
 var Init = cmd.Sub{
 	Name:  "init",
 	Alias: "i",
-	Short: "Initialize An Interface Config",
+	Short: "Initialize the decentralized node configuration file.",
 	Args:  &InitArgs{},
 	Run:   InitRun,
 }
@@ -77,9 +78,9 @@ func InitRun(r *cmd.Root, c *cmd.Sub) {
 	fmt.Println("To edit the config run,")
 	fmt.Println()
 	if strings.HasPrefix(configPath, "/etc/") {
-		fmt.Printf("    sudo nano %s\n", configPath)
+		fmt.Printf("    sudo vi %s\n", configPath)
 	} else {
-		fmt.Printf("    nano %s\n", configPath)
+		fmt.Printf("    vi %s\n", configPath)
 	}
 	fmt.Println()
 }
