@@ -1,3 +1,5 @@
 discovery
 .DS_Store
 .idea
+*.yaml
+discovery-p2p
