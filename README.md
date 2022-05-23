@@ -1,4 +1,4 @@
-# ZASentinel-p2p
+# Discovery-P2P
 
 ## Usage
 
