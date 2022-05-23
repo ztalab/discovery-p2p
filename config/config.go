@@ -6,7 +6,7 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-// Config is the main Configuration Struct for ZASentinel.
+// Config is the main Configuration Struct for Discovery P2P.
 type Config struct {
 	Path      string    `yaml:"path,omitempty"`
 	Interface Interface `yaml:"interface"`

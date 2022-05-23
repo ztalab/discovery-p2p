@@ -1,4 +1,4 @@
-module github.com/ztalab/zasentinel-p2p
+module github.com/ztalab/discovery-p2p
 
 go 1.16
 

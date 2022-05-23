@@ -20,8 +20,8 @@ import (
 	"github.com/libp2p/go-libp2p-core/network"
 	"github.com/libp2p/go-libp2p-core/peer"
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
-	"github.com/ztalab/zasentinel-p2p/config"
-	"github.com/ztalab/zasentinel-p2p/p2p"
+	"github.com/ztalab/discovery-p2p/config"
+	"github.com/ztalab/discovery-p2p/p2p"
 )
 
 var (
@@ -30,11 +30,11 @@ var (
 	RevLookup map[string]string
 )
 
-// Up creates and brings up a ZASentinel Interface.
+// Up creates and brings up a Discovery P2P Interface.
 var Up = cmd.Sub{
 	Name:  "up",
 	Alias: "up",
-	Short: "Create and Bring Up a ZASentinel Interface.",
+	Short: "Create and Bring Up a Discovery P2P Interface.",
 	Args:  &UpArgs{},
 	Flags: &UpFlags{},
 	Run:   UpRun,
@@ -166,7 +166,7 @@ func topicName(Name string) string {
 }
 
 // singalExit registers two syscall handlers on the system  so that if
-// an SIGINT or SIGTERM occur on the system zasentinel can gracefully
+// an SIGINT or SIGTERM occur on the system discovery-p2p can gracefully
 // shutdown and remove the filesystem lock file.
 func signalExit(host host.Host) {
 	// Wait for a SIGINT or SIGTERM signal

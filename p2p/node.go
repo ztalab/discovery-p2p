@@ -17,8 +17,8 @@ import (
 	ma "github.com/multiformats/go-multiaddr"
 )
 
-// Protocol is a descriptor for the ZASentinel P2P Protocol.
-const Protocol = "/zasentinel/0.0.1"
+// Protocol is a descriptor for the Discovery P2P Protocol.
+const Protocol = "/discovery-p2p/0.0.1"
 
 // CreateNode creates an internal Libp2p nodes and returns it and it's DHT Discovery service.
 func CreateNode(ctx context.Context, inputKey string, port int) (node host.Host, dhtOut *dht.IpfsDHT, err error) {
@@ -49,7 +49,7 @@ func CreateNode(ctx context.Context, inputKey string, port int) (node host.Host,
 		return
 	}
 
-	// Setup ZASentinel Stream Handler
+	// Setup Discovery P2P Stream Handler
 	//node.SetStreamHandler(Protocol, handler)
 
 	// Create DHT Subsystem

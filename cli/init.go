@@ -9,11 +9,11 @@ import (
 	"github.com/DataDrake/cli-ng/v2/cmd"
 	"github.com/libp2p/go-libp2p"
 	"github.com/libp2p/go-libp2p-core/crypto"
-	"github.com/ztalab/zasentinel-p2p/config"
+	"github.com/ztalab/discovery-p2p/config"
 	"gopkg.in/yaml.v2"
 )
 
-// Init creates a configuration for a ZASentinel Interface.
+// Init creates a configuration for a Discovery P2P Interface.
 var Init = cmd.Sub{
 	Name:  "init",
 	Alias: "i",

@@ -21,8 +21,8 @@ var Root *cmd.Root
 
 func init() {
 	Root = &cmd.Root{
-		Name:    "zasentinel",
-		Short:   "ZASentinel Distributed Network",
+		Name:    "discovery-p2p",
+		Short:   "Discovery P2P Distributed Network",
 		Version: appVersion,
 		Flags:   &GlobalFlags{},
 	}
